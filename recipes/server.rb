@@ -27,6 +27,8 @@ when 'package'
   when 'redhat', 'centos', 'fedora', 'scientific', 'amazon', 'oracle'
     include_recipe "#{cookbook_name}::_redhat_server"
   end
+when 'local'
+  include_recipe "#{cookbook_name}::package"
 when 'from_source'
   # To be filled as soon as possible
 end
